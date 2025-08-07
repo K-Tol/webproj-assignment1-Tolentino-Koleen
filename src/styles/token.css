@@ -1,0 +1,57 @@
+/* Color Palette */
+:root {
+    --color-primary: #ff7043; /* Warm orange for primary actions, evoking comfort and care */
+    --color-secondary: #ffd54f; /* Soft golden yellow for highlights, symbolizing warmth and tradition */
+    --color-accent: #4caf50; /* Fresh green for success or accents, representing growth and freshness */
+    --color-background: #fff8e1; /* Light cream background for a welcoming and cozy feel */
+    --color-text-primary: #3e2723; /* Deep brown for readability, inspired by earthy tones */
+    --color-text-secondary: #6d4c41; /* Softer brown for secondary text */
+    --color-border: #d7ccc8; /* Neutral beige for subtle borders */
+    --color-error: #e57373; /* Soft red for error messages or alerts */
+    --color-success: #81c784; /* Light green for success messages */
+}
+
+/* Typography */
+:root {
+    --font-family-primary: 'Roboto', sans-serif; /* Clean and modern font for body text */
+    --font-family-secondary: 'Merriweather', serif; /* Elegant serif font for headings */
+    --font-size-base: 16px; /* Base font size for body text */
+    --font-size-heading: 2.5rem; /* Large font size for main headings */
+    --font-size-subheading: 1.75rem; /* Medium font size for subheadings */
+    --font-size-body: 1rem; /* Standard font size for body text */
+    --font-size-small: 0.875rem; /* Smaller font size for captions or footnotes */
+}
+
+/* Spacing */
+:root {
+    --spacing-small: 8px; /* Small spacing for tight layouts */
+    --spacing-medium: 16px; /* Medium spacing for general use */
+    --spacing-large: 24px; /* Large spacing for sections */
+    --spacing-xlarge: 32px; /* Extra-large spacing for major sections */
+}
+
+/* Border Radius */
+:root {
+    --border-radius-small: 4px; /* Subtle rounding for small elements */
+    --border-radius-medium: 8px; /* Moderate rounding for buttons and cards */
+    --border-radius-large: 16px; /* Larger rounding for prominent elements */
+}
+
+/* Shadows */
+:root {
+    --box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+    --box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15); /* Medium shadow for cards or modals */
+    --box-shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.2); /* Heavy shadow for prominent elements */
+}
+
+/* Transitions */
+:root {
+    --transition-duration: 0.3s; /* Standard transition duration */
+    --transition-easing: ease-in-out; /* Smooth easing for animations */
+}
+
+/* Brand-Specific Elements */
+:root {
+    --brand-highlight: linear-gradient(90deg, #ff7043, #ffd54f); /* Gradient for buttons or headers */
+    --brand-border: 2px solid var(--color-primary); /* Bold border for key elements */
+}
