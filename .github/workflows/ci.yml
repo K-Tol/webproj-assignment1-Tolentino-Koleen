@@ -1,0 +1,85 @@
+name: CI
+
+on:
+
+  push:
+
+    branches:
+
+      - "main"
+
+  pull_request:
+
+permissions:
+
+  contents: read
+
+  pages: write
+
+  id-token: write
+
+concurrency:
+
+  group: "pages"
+
+  cancel-in-progress: false
+
+jobs:
+
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: HTMLHint
+
+        run: npx htmlhint "src/**/*.html"
+
+      - name: Install Stylelint Dependencies
+
+        run: npm install stylelint stylelint-config-standard serve --save-dev
+
+      - name: Stylelint
+
+        run: npx stylelint "src/**/*.css"
+
+      - name: a11y smoke (axe-cli)
+
+        run: |
+
+          npx serve -s src -l 5000 &
+
+          sleep 5
+
+          npx axe http://localhost:5000/index.html --exit || true
+
+          kill $(jobs -p)
+
+      - name: Link Checker
+
+        run: npx linkinator "src/**/*.html" --silent
+
+      - name: Setup Pages
+
+        if: github.ref == 'refs/heads/main'
+
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+
+        if: github.ref == 'refs/heads/main'
+
+        uses: actions/upload-pages-artifact@v3
+
+        with:
+
+          path: './src'
+
+      - name: Deploy to GitHub Pages
+
+        if: github.ref == 'refs/heads/main'
+
+        uses: actions/deploy-pages@v4
