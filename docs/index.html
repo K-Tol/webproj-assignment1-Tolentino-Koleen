@@ -210,7 +210,7 @@
             border-radius: 1.5rem;
         }
         .testimonials-section {
-            background: rgba(255,213,79,0.08);
+            background: rgba(255,213,79,0.08);  
             border-radius: 1.5rem;
         }
         .cta-btn {
@@ -478,6 +478,47 @@
             background: #e6c54f;
             transform: scale(1.05);
         }
+
+        /* SEE RECIPES Button */
+        .see-recipes-btn {
+            display: inline-block;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.3rem;
+            padding: 1rem 2.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+            border: 2px solid #ff7e5f;
+        }
+
+        /* WATCH NOW Button */
+        .watch-now-btn {
+            display: inline-block;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.3rem;
+            padding: 1rem 2.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+            border: 2px solid #6a11cb;
+        }
+
+        a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        a:focus {
+            outline: 3px solid #ffd54f;
+            outline-offset: 2px;
+        }
     </style>
     <!-- Google Fonts for improved typography -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
@@ -511,7 +552,10 @@
             <div style="flex: 1;">
                 <h1 style="font-family: var(--font-family-secondary); font-size: 3.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.1; color: #fff;">Taste<br>The Philippines</h1>
                 <p style="font-size: 1.15rem; margin-bottom: 2.5rem; color: #ffd54f;">Discover authentic Filipino-American recipes and celebrate culinary tradition.</p>
-                <a href="#recipes" style="display: inline-block; background: var(--color-secondary); color: #7a2323; font-weight: bold; font-size: 1.2rem; padding: 1rem 2.5rem; border-radius: 2rem; text-decoration: none; box-shadow: var(--box-shadow-light); margin-bottom: 2rem;">SEE RECIPES</a>
+                <!-- SEE RECIPES Button -->
+                <a href="#recipes" class="see-recipes-btn">
+                    SEE RECIPES
+                </a>
             </div>
             <div style="flex: 1; display: flex; justify-content: center;">
                 <img src="../docs/Images for Website/hero-pic1.png" alt="Filipino family sharing a meal together" style="max-width: 350px; border-radius: 1.5rem; box-shadow: var(--box-shadow-heavy);">
@@ -552,13 +596,22 @@
         <p style="font-size: 1.15rem; color: var(--color-text-secondary); margin-bottom: var(--spacing-large); text-align: center; max-width: 700px;">Experience the best of both worlds—traditional Filipino dishes and modern, quick meals for busy lives.</p>
         <img src="../docs/Images for Website/hero-pic3.png" alt="Traditional Filipino food spread on a table" style="max-width: 350px; height: auto; border-radius: var(--border-radius-large); box-shadow: var(--box-shadow-heavy); margin-bottom: var(--spacing-large);">
     </section>
-    <!-- ...existing code... -->
+    <!-- Lumpia Queen YouTube Channel Section -->
+    <section id="hero-lumpia-queen" style="display: flex; flex-direction: column; align-items: center; margin-bottom: var(--spacing-xlarge);">
+        <h2 style="font-family: var(--font-family-secondary); font-size: 2.5rem; color: var(--color-secondary); margin-bottom: var(--spacing-medium);">Lumpia Queen</h2>
+        <p style="font-size: 1.15rem; color: var(--color-text-secondary); margin-bottom: var(--spacing-large); text-align: center; max-width: 700px;">Join the Lumpia Queen on a culinary adventure! Learn to make the best lumpia and other Filipino delicacies.</p>
+        <img src="../docs/Images for Website/Screenshot 2025-08-11 123650.png" alt="Lumpia Queen promoting her YouTube channel" style="max-width: 350px; height: auto; border-radius: var(--border-radius-large); box-shadow: var(--box-shadow-heavy); margin-bottom: var(--spacing-large);">
+        <!-- WATCH NOW Button -->
+        <a href="https://www.youtube.com/@LumpiaQueen" target="_blank" class="watch-now-btn">
+            WATCH NOW
+        </a>
+    </section>
 
     <main style="font-size: var(--font-size-body); color: var(--color-text-primary); line-height: 1.7;">
         <!-- About Section -->
         <section id="about" style="margin-bottom: var(--spacing-xlarge);">
             <h2 style="font-family: var(--font-family-secondary); font-size: var(--font-size-subheading); color: var(--color-primary);">About Cooking FilAm</h2>
-            <p>Cooking FilAm is here to help you rediscover your roots or explore a new culture through food. As a Caregiver brand, we aim to guide and support you every step of the way, whether you're a beginner or an experienced cook.</p>
+            <p>Cooking FilAm is here to help you rediscover your roots or explore a new culture through food. We aim to guide and support you every step of the way, whether you're a beginner or an experienced cook.</p>
             <p>Our mission is to preserve traditional Filipino recipes while making them accessible to modern home cooks. With step-by-step guidance, AI-powered tools, and a supportive community, we make cooking Filipino-American dishes easy and enjoyable.</p>
         </section>
 
@@ -596,7 +649,7 @@
         <!-- Contact Section -->
         <section id="contact" style="margin-bottom: var(--spacing-xlarge);">
             <h2 style="font-family: var(--font-family-secondary); font-size: var(--font-size-subheading); color: var(--color-primary);">Contact Us</h2>
-            <p>Have questions or feedback? We'd love to hear from you! Reach out to us at <a href="mailto:privacy@legs-ground.com" style="color: var(--color-accent); text-decoration: underline;">privacy@legs-ground.com</a>.</p>
+            <p>Have questions or feedback? We'd love to hear from you! Reach out to us at <a href="mailto:kt336@njit.edu" style="color: var(--color-accent); text-decoration: underline;">kt336@njit.edu</a>.</p>
         </section>
     </main>
 
