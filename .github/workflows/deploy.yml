@@ -5,6 +5,9 @@ on:
     branches:
       - Page1
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
