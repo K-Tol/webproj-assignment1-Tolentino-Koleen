@@ -3,6 +3,88 @@
 <head>
     <!-- Add simple CSS for design improvements -->
     <style>
+        /* Implement website improvements */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #4CAF50;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #45A049;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cta-btn {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
+        }
+
+        /* Existing styles... */
         body {
             background: #7a2323;
             font-family: 'Roboto', var(--font-family-primary), sans-serif;
@@ -132,12 +214,21 @@
             border-radius: 1.5rem;
         }
         .cta-btn {
-            transition: background 0.2s, transform 0.2s;
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #4CAF50; /* Green color for distinction */
+            color: #fff; /* White text for contrast */
+            font-weight: bold;
+            font-size: 1.2rem; /* Slightly larger font size */
+            text-transform: uppercase;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+            transition: background 0.3s, transform 0.3s;
         }
         .cta-btn:hover {
-            background: #ffd54f;
-            color: #7a2323;
-            transform: scale(1.05);
+            background: #45A049; /* Slightly darker green on hover */
+            transform: scale(1.05); /* More pronounced hover effect */
         }
         .nav-icon {
             width: 18px;
@@ -161,12 +252,231 @@
             }
         }
         footer {
-            background: #5a1818;
-            border-top: 3px solid #ffd54f;
+            background: linear-gradient(90deg, #2c2c2c, #3a3a3a); /* Subtle gradient for visual appeal */
+            color: #fff;
+            padding: 3rem 0; /* Increased padding for better spacing */
+            width: 100%; /* Extend the footer to cover the full width */
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2); /* Add shadow for separation */
         }
+
+        footer h4 {
+            font-size: 1.4rem; /* Larger font size for section titles */
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #ffd54f; /* Highlight section titles */
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer ul li a {
+            color: #ffd54f;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        footer ul li a:hover {
+            color: #fff; /* Change color on hover */
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            margin-right: 1rem;
+            transition: transform 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            transform: scale(1.1); /* Add hover effect */
+        }
+
+        footer form input {
+            width: calc(100% - 1rem); /* Adjust width to fit within the container */
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        footer form button {
+            width: calc(100% - 1rem); /* Adjust width to fit within the container */
+            padding: 0.5rem;
+            background: #ffd54f;
+            color: #2c2c2c;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        footer form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
         a:focus, button:focus, input:focus {
             outline: 2px solid #ffd54f;
             outline-offset: 2px;
+        }
+
+        /* Add improvements to the sections */
+        section {
+            margin-bottom: 3rem; /* Increase spacing between sections */
+            padding: 2rem; /* Add padding for better readability */
+            background: linear-gradient(to bottom, #7a2323, #5a1a1a); /* Subtle gradient for visual appeal */
+            border-radius: 8px; /* Rounded corners for sections */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+        }
+
+        section h2 {
+            font-family: 'Merriweather', serif; /* Use a complementary font for headings */
+            font-size: 2.5rem; /* Larger font size for better hierarchy */
+            color: #ffd54f; /* Highlight section titles */
+            text-align: center; /* Center-align headings */
+        }
+
+        section p {
+            font-size: 1.2rem; /* Adjust font size for readability */
+            line-height: 1.8; /* Improve text spacing */
+            color: #fff; /* Ensure text contrast */
+            text-align: center; /* Center-align text */
+        }
+
+        section img {
+            max-width: 300px; /* Ensure consistent image dimensions */
+            border-radius: 12px; /* Add rounded corners to images */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+            transition: transform 0.3s; /* Add hover effect */
+        }
+
+        section img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        section .cta-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: #ffd54f;
+            color: #7a2323;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        section .cta-btn:hover {
+            background: #e6c54f; /* Slightly darker shade on hover */
+            transform: scale(1.05); /* Add hover effect */
+        }
+
+        ul {
+            padding-left: 0; /* Remove extra padding */
+            text-align: left; /* Align the list with the text above */
+            margin-left: 2rem; /* Adjust margin to align with the paragraph */
+        }
+
+        /* Enhance the testimonial section */
+        .testimonial-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+
+        .testimonial-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-image {
+            flex-shrink: 0;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-right: 1.5rem;
+        }
+
+        .testimonial-content {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .testimonial-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-content .author {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .testimonial-card {
+            max-width: 200px;
+            text-align: center;
+            background: #fff;
+            color: #7a2323;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-card img {
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: #ffd54f;
+            color: #7a2323;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #e6c54f;
+            transform: scale(1.05);
         }
     </style>
     <!-- Google Fonts for improved typography -->
@@ -226,7 +536,7 @@
     <section id="hero-family" style="display: flex; flex-direction: column; align-items: center; margin-bottom: var(--spacing-xlarge);">
         <h2 style="font-family: var(--font-family-secondary); font-size: 2.5rem; color: var(--color-secondary); margin-bottom: var(--spacing-medium);">Family & Community</h2>
         <p style="font-size: 1.15rem; color: var(--color-text-secondary); margin-bottom: var(--spacing-large); text-align: center; max-width: 700px;">Filipino cooking is about bringing people together. Celebrate family, friends, and tradition around the table.</p>
-        <img src="../docs/Images for Website/hero-pic1.png" alt="Filipino family sharing a meal together" style="max-width: 350px; height: auto; border-radius: var(--border-radius-large); box-shadow: var(--box-shadow-heavy); margin-bottom: var(--spacing-large);">
+        <img src="../docs/Images for Website/hero-pic7.png" alt="A vibrant Filipino food spread" style="max-width: 350px; height: auto; border-radius: var(--border-radius-large); box-shadow: var(--box-shadow-heavy); margin-bottom: var(--spacing-large);">
     </section>
 
     <!-- Hero Section 2 -->
@@ -256,12 +566,24 @@
         <section id="recipes" style="margin-bottom: var(--spacing-xlarge);">
             <h2 style="font-family: var(--font-family-secondary); font-size: var(--font-size-subheading); color: var(--color-primary);">Featured Recipes</h2>
             <p>Explore our collection of authentic and modern Filipino-American recipes. From grandma’s traditional dishes to quick and easy meals, we have something for everyone.</p>
-            <ul style="padding-left: var(--spacing-large);">
-                <li>Chicken Adobo</li>
-                <li>Arroz Caldo</li>
-                <li>Lumpia (Spring Rolls)</li>
-                <li>Pancit (Noodles)</li>
-            </ul>
+            <!-- Add summaries for each recipe -->
+            <div style="text-align: center; margin: var(--spacing-xlarge) 0;">
+                <h2 style="font-family: var(--font-family-secondary); font-size: var(--font-size-subheading); color: var(--color-primary);">Featured Recipes</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li>
+                        <strong>Chicken Adobo:</strong> A savory and tangy Filipino dish made with chicken marinated in soy sauce, vinegar, garlic, and spices.
+                    </li>
+                    <li>
+                        <strong>Arroz Caldo:</strong> A comforting rice porridge infused with ginger, garlic, and chicken, perfect for cold days.
+                    </li>
+                    <li>
+                        <strong>Lumpia (Spring Rolls):</strong> Crispy and flavorful Filipino spring rolls filled with meat and vegetables.
+                    </li>
+                    <li>
+                        <strong>Pancit (Noodles):</strong> Stir-fried noodles with meat and vegetables, symbolizing long life and prosperity.
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Community Section -->
@@ -282,31 +604,67 @@
     <section id="testimonials" style="margin: var(--spacing-xlarge) 0; text-align: center;">
         <h2 style="font-family: var(--font-family-secondary); font-size: var(--font-size-subheading); color: var(--color-primary);">What Our Community Says</h2>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <img src="../docs/Images for Website/testimonal1.png" alt="Testimonial from Cooking FilAm community member 1" style="max-width: 180px; height: auto; border-radius: var(--border-radius-medium); box-shadow: var(--box-shadow-light);">
-            <img src="../docs/Images for Website/testimonal2.png" alt="Testimonial from Cooking FilAm community member 2" style="max-width: 180px; height: auto; border-radius: var(--border-radius-medium); box-shadow: var(--box-shadow-light);">
-            <img src="../docs/Images for Website/testimonal3.png" alt="Testimonial from Cooking FilAm community member 3" style="max-width: 180px; height: auto; border-radius: var(--border-radius-medium); box-shadow: var(--box-shadow-light);">
+            <div>
+                <img src="../docs/Images for Website/testimonal1.png" alt="Testimonial from Cooking FilAm community member 1" style="max-width: 180px; height: auto; border-radius: var(--border-radius-medium); box-shadow: var(--box-shadow-light);">
+                <p style="font-size: 0.9rem; color: #fff; margin-top: 0.5rem;">"Cooking FilAm has completely transformed the way I cook Filipino dishes. The recipes are easy to follow and absolutely delicious!"</p>
+            </div>
+            <div>
+                <img src="../docs/Images for Website/testimonal2.png" alt="Testimonial from Cooking FilAm community member 2" style="max-width: 180px; height: auto; border-radius: var(--border-radius-medium); box-shadow: var(--box-shadow-light);">
+                <p style="font-size: 0.9rem; color: #fff; margin-top: 0.5rem;">"I love how Cooking FilAm preserves Filipino traditions while making them accessible to everyone. It's my go-to site for authentic recipes!"</p>
+            </div>
+            <div>
+                <img src="../docs/Images for Website/testimonal3.png" alt="Testimonial from Cooking FilAm community member 3" style="max-width: 180px; height: auto; border-radius: var(--border-radius-medium); box-shadow: var(--box-shadow-light);">
+                <p style="font-size: 0.9rem; color: #fff; margin-top: 0.5rem;">"The community and resources on Cooking FilAm are amazing. I've learned so much and feel more connected to my roots!"</p>
+            </div>
         </div>
     </section>
 
-    <footer style="background: var(--color-primary); color: #fff; padding: var(--spacing-large) 0; text-align: center; margin-top: var(--spacing-xlarge);">
-        <div class="container" style="max-width: 1100px; margin: 0 auto;">
-            <p style="margin: 0 0 var(--spacing-small) 0;">&copy; 2025 Cooking FilAm. All rights reserved.</p>
-            <div style="margin-bottom: var(--spacing-small);">
-                <a href="https://www.youtube.com" style="color: #fff; margin: 0 var(--spacing-small); text-decoration: none; font-size: 1.2rem;">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;">YouTube
-                </a>
-                <a href="#" style="color: #fff; margin: 0 var(--spacing-small); text-decoration: none; font-size: 1.2rem;">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;">Facebook
-                </a>
-                <a href="#" style="color: #fff; margin: 0 var(--spacing-small); text-decoration: none; font-size: 1.2rem;">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;">Instagram
-                </a>
+    <footer style="background: linear-gradient(90deg, #2c2c2c, #3a3a3a); color: #fff; padding: 3rem 0;">
+        <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+            <!-- Our Mission Section -->
+            <div>
+                <h4 style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1rem; color: #ffd54f;">Our Mission</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6;">At Cooking FilAm, our mission is to bridge the gap between tradition and modernity by preserving Filipino-American culinary heritage while making it accessible to everyone. We aim to inspire a love for cooking and cultural exploration through authentic recipes and innovative techniques.</p>
             </div>
-            <form style="margin-top: var(--spacing-small);">
-                <label for="newsletter" style="margin-right: var(--spacing-small);">Subscribe for updates:</label>
-                <input type="email" id="newsletter" name="newsletter" placeholder="Your email" style="padding: var(--spacing-small); border-radius: var(--border-radius-small); border: 1px solid var(--color-border);">
-                <button type="submit" style="padding: var(--spacing-small) var(--spacing-medium); background: var(--color-accent); color: #fff; border: none; border-radius: var(--border-radius-small); font-weight: bold; cursor: pointer;">Subscribe</button>
-            </form>
+
+            <!-- Navigation Links -->
+            <div>
+                <h4 style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1rem; color: #ffd54f;">Quick Links</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="#about" style="color: #ffd54f; text-decoration: none; font-size: 0.9rem;">About</a></li>
+                    <li><a href="#recipes" style="color: #ffd54f; text-decoration: none; font-size: 0.9rem;">Recipes</a></li>
+                    <li><a href="#contact" style="color: #ffd54f; text-decoration: none; font-size: 0.9rem;">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media Links -->
+            <div>
+                <h4 style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1rem; color: #ffd54f;">Follow Us</h4>
+                <div style="display: flex; gap: 1rem;" class="social-icons">
+                    <a href="#" style="color: #fff; text-decoration: none;">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="#" style="color: #fff; text-decoration: none;">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="#" style="color: #fff; text-decoration: none;">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" style="width: 24px; height: 24px;">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <div>
+                <h4 style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1rem; color: #ffd54f;">Subscribe</h4>
+                <form>
+                    <input type="email" placeholder="Your email" style="width: calc(100% - 1rem); padding: 0.5rem; border: none; border-radius: 4px; margin-bottom: 0.5rem;">
+                    <button type="submit" style="width: calc(100% - 1rem); padding: 0.5rem; background: #ffd54f; color: #2c2c2c; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem; font-size: 0.8rem; color: #aaa;">
+            &copy; 2025 Cooking FilAm. All rights reserved.
         </div>
     </footer>
     </div>
